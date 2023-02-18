@@ -57,7 +57,10 @@ def main(
     )
 ) -> None:
     """About qgofer."""
-    username = os.getlogin()
+    try:
+        username = os.getlogin()
+    except FileNotFoundError:
+        username = "You"
     typer.echo(f"Hello {username}, I am Q, your assistant.\n")
     typer.echo(f"My model version is '{__version__}'\n")
     description = __description__.lower()
