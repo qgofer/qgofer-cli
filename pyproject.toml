@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "qgofer"
-version = "0.1.1-alpha.6"
+version = "0.1.1-alpha.7"
 homepage = "https://github.com/qgofer/qgofer-cli"
 description = "All your documents are one quick search away."
 authors = ["acquayefrank <dev@qgofer.com>"]
@@ -73,7 +73,7 @@ doc = [
     ]
 
 [tool.poetry.scripts]
-qgofer = 'qgofer.cli:main'
+qgofer = 'qgofer.__main__:main'
 
 [tool.black]
 line-length = 120

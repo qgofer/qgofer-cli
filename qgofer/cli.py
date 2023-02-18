@@ -1,5 +1,6 @@
 """Console script for qgofer_cli."""
 
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -25,7 +26,7 @@ def init_path(path: Path) -> Path:
     return Path(path).expanduser().resolve()
 
 
-@app.command()
+@app.command("wake-up")
 def init(
     home_dir: Optional[Path] = typer.Option(
         None,
@@ -44,20 +45,21 @@ def init(
     return None
 
 
-@app.command()
+@app.command("hello")
 def main(
     version: Optional[bool] = typer.Option(
         None,
-        "--version",
+        "--what-version",
         "-v",
         help="Show the current version of qgofer that has been installed.",
         callback=version_callback,
         is_eager=True,
     )
 ) -> None:
-    """Main entrypoint."""
-    name_version = f"{__app_name__} v{__version__}"
-    typer.echo(name_version)
-    typer.echo("=" * len(name_version))
-    typer.echo(f"{__description__}")
+    """About qgofer."""
+    username = os.getlogin()
+    typer.echo(f"Hello {username}, I am Q, your assistant.\n")
+    typer.echo(f"My model version is '{__version__}'\n")
+    description = __description__.lower()
+    typer.echo(f"With my help, {description}.\n")
     return None
