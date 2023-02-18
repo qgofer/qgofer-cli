@@ -4,7 +4,7 @@ from typing import Optional
 
 import typer
 
-from qgofer import __app_name__, __version__
+from qgofer import __app_name__, __description__, __version__
 
 app = typer.Typer()
 
@@ -21,7 +21,7 @@ def main(
         None,
         "--version",
         "-v",
-        help="All your documents are one quick search away.",
+        help=f"{__description__}",
         callback=_version_callback,
         is_eager=True,
     )
@@ -30,5 +30,5 @@ def main(
     name_version = f"{__app_name__} v{__version__}"
     typer.echo(name_version)
     typer.echo("=" * len(name_version))
-    typer.echo("All your documents are one quick search away.")
+    typer.echo(f"{__description__}")
     return None
