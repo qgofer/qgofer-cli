@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-"""Tests for `qgofer_cli` package."""
+"""Tests for `qgofer` package."""
 
 import pytest
 from click.testing import CliRunner
 
-from qgofer_cli import cli
+from qgofer import cli
 
 
 @pytest.fixture
@@ -29,7 +29,7 @@ def test_command_line_interface():
     runner = CliRunner()
     result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert 'qgofer-cli' in result.output
+    assert 'qgofer' in result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output

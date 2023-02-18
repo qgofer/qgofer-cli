@@ -1,6 +1,6 @@
 [tool]
 [tool.poetry]
-name = "qgofer-cli"
+name = "qgofer"
 version = "0.1.1a1"
 homepage = "https://github.com/qgofer/qgofer-cli"
 description = "All your documents are one quick search away.."
@@ -19,7 +19,7 @@ classifiers=[
     'Programming Language :: Python :: 3.9',
 ]
 packages = [
-    { include = "qgofer_cli" },
+    { include = "qgofer" },
     { include = "tests", format = "sdist" },
 ]
 
@@ -72,7 +72,7 @@ doc = [
     ]
 
 [tool.poetry.scripts]
-qgofer-cli = 'qgofer_cli.cli:main'
+qgofer = 'qgofer.cli:main'
 
 [tool.black]
 line-length = 120

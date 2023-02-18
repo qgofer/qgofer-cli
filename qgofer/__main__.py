@@ -1,4 +1,4 @@
-from qgofer_cli import __app_name__, cli
+from qgofer import __app_name__, cli
 
 
 def main():

@@ -4,7 +4,7 @@ from typing import Optional
 
 import typer
 
-from qgofer_cli import __app_name__, __version__
+from qgofer import __app_name__, __version__
 
 app = typer.Typer()
 
@@ -27,7 +27,8 @@ def main(
     )
 ) -> None:
     """Main entrypoint."""
-    typer.echo("qgofer-cli")
-    typer.echo("=" * len("qgofer-cli"))
+    name_version = f"{__app_name__} v{__version__}"
+    typer.echo(name_version)
+    typer.echo("=" * len(name_version))
     typer.echo("All your documents are one quick search away.")
     return None
