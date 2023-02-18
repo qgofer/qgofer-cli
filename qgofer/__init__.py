@@ -1,30 +1,8 @@
 """Top-level package for qgofer."""
 
-
-def qgofer_version():
-    with open('./qgofer/metadata.txt') as f:
-        for line in f:
-            if line.startswith('version'):
-                return line.split('=')[1].strip().strip('"')
-
-
-def qgofer_name():
-    with open('./qgofer/metadata.txt') as f:
-        for line in f:
-            if line.startswith('name'):
-                return line.split('=')[1].strip().strip('"')
-
-
-def qgofer_description():
-    with open('./qgofer/metadata.txt') as f:
-        for line in f:
-            if line.startswith('description'):
-                return line.split('=')[1].strip().strip('"')
-
-
-__author__ = """acquayefrank"""
+__author__ = "acquayefrank"
 __email__ = 'dev@qgofer.com'
-__version__ = qgofer_version()
+__version__ = '0.1.1-alpha.6'
 __license__ = 'MIT'
-__app_name__ = qgofer_name()
-__description__ = qgofer_description()
+__app_name__ = 'qgofer'
+__description__ = 'All your documents are one quick search away.'

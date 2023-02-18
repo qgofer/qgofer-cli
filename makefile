@@ -1,7 +1,11 @@
-sources = qgofer_cli
+sources = qgofer
 
-.PHONY: test format lint unittest coverage pre-commit clean
-test: format lint unittest
+.PHONY: gen_meta test format lint unittest coverage pre-commit clean
+test: gen_meta format lint unittest
+all: gen_meta format lint unittest coverage pre-commit clean
+
+gen_meta:
+	python -m scripts.gen_meta
 
 format:
 	isort $(sources) tests

@@ -23,10 +23,14 @@ def generate_metadata():
     version = qgofer_version()
     name = qgofer_name()
     description = qgofer_description()
-    with (open('./qgofer/metadata.txt', 'w')) as f:
-        f.write(f"version={version}\n")
-        f.write(f"name={name}\n")
-        f.write(f"description={description}\n")
+    with (open('./qgofer/__init__.py', 'w')) as f:
+        f.write('"""Top-level package for qgofer."""\n\n')
+        f.write('__author__ = "acquayefrank"\n')
+        f.write("__email__ = 'dev@qgofer.com'\n")
+        f.write(f"__version__ = '{version}'\n")
+        f.write("__license__ = 'MIT'\n")
+        f.write(f"__app_name__ = '{name}'\n")
+        f.write(f"__description__ = '{description}'\n")
 
 
 if __name__ == "__main__":
