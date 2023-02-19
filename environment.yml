@@ -6,7 +6,11 @@ channels:
 
 dependencies:
   - python=3.9
-  - pip:
-    - pytest==7.2.1
-    - flake8==6.0.0
-    - pytest-cov==4.0.0
+  - mamba
+  - pip
+  - pytest==7.2.1
+  - flake8==6.0.0
+  - pytest-cov==4.0.0
+  - mypy==1.0.1
+  - conda-lock
+  - poetry=1.3.2

@@ -1,0 +1,112 @@
+"""Main module."""
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any, Dict, Generator
+
+from .logger import get_logger
+from .utils import get_log_path, init_path
+
+home_dir = init_path()
+log_path = get_log_path()
+logger = get_logger(log_path=log_path)
+
+supported_extensions = ['.txt']
+folders_to_index = [
+    'Documents',
+    'Downloads',
+    'Desktop',
+    'Music',
+    'Videos',
+    'Pictures',
+    'Movies',
+    'OneDrive',
+    'Dropbox',
+    'Google Drive',
+]
+
+
+def _index_folder(path: Path) -> Generator[Path, None, None]:
+    """Index the folder."""
+    path = Path(path).expanduser().resolve()
+    try:
+        for item in path.iterdir():
+            if item.name.startswith('.'):
+                continue
+            if item.is_dir():
+                if item.name in folders_to_index:
+                    yield from _index_folder(item)
+            elif item.is_file():
+                if item.suffix in supported_extensions:
+                    yield item
+    except (PermissionError, FileNotFoundError) as err:
+        logger.error(err)
+
+
+class App:
+    """The main app class."""
+
+    __slots__ = (
+        "_home",
+        "_root_dir",
+        "_qgofer",
+        "_qgofer_config",
+        "_qgofer_cache",
+        "_qgofer_cache_db",
+        "_qgofer_logs",
+    )
+    _instances: Dict[Any, Any] = {}
+
+    def __new__(cls, home, root_dir) -> App:
+        if cls not in cls._instances:
+            cls._instances[cls] = super(App, cls).__new__(cls)
+        return cls._instances[cls]
+
+    def __init__(self, home: Path = Path.home(), root_dir: Path = Path.home()):
+        self._home = home
+        self._root_dir = root_dir
+        self._qgofer = self._home / '.qgofer'
+        self._qgofer.mkdir(parents=True, exist_ok=True)
+        self._qgofer_config = self._qgofer / 'config.toml'
+        self._qgofer_config.touch(exist_ok=True)
+        self._qgofer_cache = self._qgofer / 'cache'
+        self._qgofer_cache.mkdir(parents=True, exist_ok=True)
+        self._qgofer_cache_db = self._qgofer_cache / 'qgofer.db'
+        self._qgofer_cache_db.touch(exist_ok=True)
+        self._qgofer_logs = self._qgofer / 'logs'
+        self._qgofer_logs.mkdir(parents=True, exist_ok=True)
+
+    @property
+    def home(self) -> Path:
+        return self._home
+
+    @property
+    def qgofer(self) -> Path:
+        return self._qgofer
+
+    @property
+    def qgofer_config(self) -> Path:
+        return self._qgofer_config
+
+    @property
+    def qgofer_cache(self) -> Path:
+        return self._qgofer_cache
+
+    @property
+    def qgofer_cache_db(self) -> Path:
+        return self._qgofer_cache_db
+
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}({self.home})"
+
+    def __str__(self) -> str:
+        return "Qgofer your personal assistant"
+
+
+def create_index_list(app: App) -> App:
+    """Index the folders."""
+    # A list to be populated with async tasks.
+    for item in _index_folder(app._root_dir):
+        with open(app._qgofer_cache / "inde_list.txt", "a", encoding="utf-8") as f:
+            f.write(f"{item}\n")
+    return app

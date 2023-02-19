@@ -1,13 +1,14 @@
 """Console script for qgofer_cli."""
 
 import os
-from pathlib import Path
 from typing import Optional
 
 import typer
 
 from qgofer import __app_name__, __description__, __version__
-from qgofer.q import Q
+
+from .app import App, create_index_list
+from .utils import init_path
 
 app = typer.Typer()
 
@@ -19,29 +20,23 @@ def version_callback(value: bool) -> None:
     return None
 
 
-def init_path(path: Path) -> Path:
-    """Convert the string to a path object."""
-    if path is None:
-        return Path.home()
-    return Path(path).expanduser().resolve()
-
-
 @app.command("wake-up")
 def init(
-    home_dir: Optional[Path] = typer.Option(
+    home_dir=typer.Option(
         None,
         "--home-dir",
         "-d",
         help="The user home directory to use for qgofer.",
         callback=init_path,
-    )
+    ),
+    root_dir=typer.Option(
+        None, "--root-dir", "-r", help="The root directory to start searching from.", callback=init_path
+    ),
 ) -> None:
     """Initialize qgofer."""
     typer.echo("Initializing qgofer...")
-    if home_dir is not None:
-        _ = Q(home_dir)
-    else:
-        _ = Q()
+    qgofer_app = App(home_dir, root_dir)
+    create_index_list(qgofer_app)
     return None
 
 
