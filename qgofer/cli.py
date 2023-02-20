@@ -7,7 +7,7 @@ import typer
 
 from qgofer import __app_name__, __description__, __version__
 
-from .app import App, create_index_list
+from .app import App, create_index_list, process_index_list
 from .utils import init_path
 
 app = typer.Typer()
@@ -36,7 +36,8 @@ def init(
     """Initialize qgofer."""
     typer.echo("Initializing qgofer...")
     qgofer_app = App(home_dir, root_dir)
-    create_index_list(qgofer_app)
+    qgofer_app = create_index_list(qgofer_app)
+    qgofer_app = process_index_list(qgofer_app)
     return None
 
 

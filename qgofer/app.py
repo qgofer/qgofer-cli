@@ -1,8 +1,13 @@
 """Main module."""
 from __future__ import annotations
 
+import os
+from asyncio import run as async_run
 from pathlib import Path
-from typing import Any, Dict, Generator
+from typing import Any, AsyncGenerator, Dict, Generator, Tuple
+
+import aiofiles
+from keybert import KeyBERT
 
 from .logger import get_logger
 from .utils import get_log_path, init_path
@@ -25,22 +30,7 @@ folders_to_index = [
     'Google Drive',
 ]
 
-
-def _index_folder(path: Path) -> Generator[Path, None, None]:
-    """Index the folder."""
-    path = Path(path).expanduser().resolve()
-    try:
-        for item in path.iterdir():
-            if item.name.startswith('.'):
-                continue
-            if item.is_dir():
-                if item.name in folders_to_index:
-                    yield from _index_folder(item)
-            elif item.is_file():
-                if item.suffix in supported_extensions:
-                    yield item
-    except (PermissionError, FileNotFoundError) as err:
-        logger.error(err)
+kw_model = KeyBERT()
 
 
 class App:
@@ -101,6 +91,67 @@ class App:
 
     def __str__(self) -> str:
         return "Qgofer your personal assistant"
+
+
+def _index_folder(path: Path) -> Generator[Path, None, None]:
+    """Index the folder."""
+    path = Path(path).expanduser().resolve()
+    try:
+        for item in path.iterdir():
+            if item.name.startswith('.'):
+                continue
+            if item.is_dir():
+                if item.name in folders_to_index:
+                    yield from _index_folder(item)
+            elif item.is_file():
+                if item.suffix in supported_extensions:
+                    yield item
+    except (PermissionError, FileNotFoundError) as err:
+        logger.error(err)
+
+
+# TODO: Clean up this function
+def process_index_list(app: App) -> App:
+    """Process the index list."""
+
+    async def _read_index_list(app: App) -> AsyncGenerator[Path, None]:
+        """Read the index list."""
+        async with aiofiles.open(app._qgofer_cache / "inde_list.txt", "r", encoding="utf-8") as f:
+            async for line in f:
+                yield Path(line.strip())
+
+    async def _process_files(app: App) -> AsyncGenerator[Tuple[str, Path], None]:
+        """Process the index list."""
+        async for item in _read_index_list(app):
+            async with aiofiles.open(item, "r", encoding="utf-8") as f:
+                content = await f.read()
+                yield content, item
+
+    async def _gen_meta(app: App) -> AsyncGenerator[Tuple[Any, float, float, Path], None]:
+        """Generate the meta data."""
+        async for content, file in _process_files(app):
+            kw = kw_model.extract_keywords(
+                content,
+                keyphrase_ngram_range=(1, 2),
+                stop_words='english',
+                use_maxsum=True,
+                use_mmr=True,
+                diversity=0.7,
+                top_n=5,
+            )
+            m_time = os.path.getmtime(file)
+            c_time = os.path.getctime(file)
+            print(kw, m_time, c_time, file)
+            yield kw, m_time, c_time, file
+
+    async def _process_meta(app: App) -> None:
+        """Process the meta data."""
+        async for kw, m_time, c_time, file in _gen_meta(app):
+            print(kw, m_time, c_time, file)
+
+    async_run(_process_meta(app))
+
+    return app
 
 
 def create_index_list(app: App) -> App:
