@@ -34,3 +34,4 @@ repos:
         exclude: tests/
         additional_dependencies:
           - types-click
+          - types-aiofiles

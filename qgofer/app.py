@@ -4,12 +4,14 @@ from __future__ import annotations
 import os
 from asyncio import run as async_run
 from pathlib import Path
-from typing import Any, AsyncGenerator, Dict, Generator, Tuple
+
+if False:  # TYPE_CHECKING
+    from typing import AsyncGenerator, Any, Dict, Generator, Tuple
 
 import aiofiles
-from keybert import KeyBERT
 
 from .logger import get_logger
+from .rake import RAKE
 from .utils import get_log_path, init_path
 
 home_dir = init_path()
@@ -29,8 +31,7 @@ folders_to_index = [
     'Dropbox',
     'Google Drive',
 ]
-
-kw_model = KeyBERT()
+rake = RAKE()
 
 
 class App:
@@ -130,15 +131,7 @@ def process_index_list(app: App) -> App:
     async def _gen_meta(app: App) -> AsyncGenerator[Tuple[Any, float, float, Path], None]:
         """Generate the meta data."""
         async for content, file in _process_files(app):
-            kw = kw_model.extract_keywords(
-                content,
-                keyphrase_ngram_range=(1, 2),
-                stop_words='english',
-                use_maxsum=True,
-                use_mmr=True,
-                diversity=0.7,
-                top_n=5,
-            )
+            kw = rake.exec(content)
             m_time = os.path.getmtime(file)
             c_time = os.path.getctime(file)
             print(kw, m_time, c_time, file)
