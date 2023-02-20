@@ -2554,6 +2554,23 @@ doc = ["cairosvg (>=2.5.2,<3.0.0)", "mdx-include (>=1.4.1,<2.0.0)", "mkdocs (>=1
 test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.0.0)", "mypy (==0.910)", "pytest (>=4.4.0,<8.0.0)", "pytest-cov (>=2.10.0,<5.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "pytest-xdist (>=1.32.0,<4.0.0)", "rich (>=10.11.0,<13.0.0)", "shellingham (>=1.3.0,<2.0.0)"]
 
 [[package]]
+name = "typer-cli"
+version = "0.0.13"
+description = "Run Typer scripts with completion, without having to create a package, using Typer CLI."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "typer_cli-0.0.13-py3-none-any.whl", hash = "sha256:5ae0f99dce8f8f9669137a2c98eb42485cd4412e0ec225c8eb29ce8ac3378731"},
+    {file = "typer_cli-0.0.13.tar.gz", hash = "sha256:f5b85764e56fb3fe835ed008ad5bc7db4961f7bcce1f1c1698ac46b6c5d9b86f"},
+]
+
+[package.dependencies]
+colorama = ">=0.4.3,<=0.5.0"
+shellingham = ">=1.3.2,<=1.4.0"
+typer = ">=0.4.0,<=0.7.0"
+
+[[package]]
 name = "types-aiofiles"
 version = "22.1.0.8"
 description = "Typing stubs for aiofiles"
@@ -2719,4 +2736,4 @@ test = ["pytest", "black", "isort", "mypy", "flake8", "flake8-docstrings", "pyte
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9.16,<4.0"
-content-hash = "ddeddbd668ef901886cca26a2b449dc1230e0f399b46c69fc45e9f82cdd13632"
+content-hash = "05aa650a9566bf78cae67c8c3ea1f83081bb7a74686bb16ddc1a0d8752c5f5a4"
