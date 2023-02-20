@@ -81,6 +81,7 @@ qgofer = 'qgofer.__main__:main'
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.10.0"
 typer-cli = "^0.0.13"
+py = "^1.11.0"
 
 [tool.black]
 line-length = 120

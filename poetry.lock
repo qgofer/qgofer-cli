@@ -1516,7 +1516,7 @@ name = "py"
 version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 files = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
@@ -2736,4 +2736,4 @@ test = ["pytest", "black", "isort", "mypy", "flake8", "flake8-docstrings", "pyte
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9.16,<4.0"
-content-hash = "05aa650a9566bf78cae67c8c3ea1f83081bb7a74686bb16ddc1a0d8752c5f5a4"
+content-hash = "dcc902b761ce38dbcb6468c4101d37f3af72ea2c9a2774992b6faedcf3d2984c"
