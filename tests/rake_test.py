@@ -1,3 +1,4 @@
+"""Test RAKE class."""
 import os
 import sys
 import unittest
@@ -8,10 +9,14 @@ sys.path.append(os.path.abspath(sys.path[0]) + '/../')
 
 
 class TestRAKE(unittest.TestCase):
+    """Test RAKE class."""
+
     def setUp(self):
+        """Set up the test."""
         self.rake = RAKE()
 
     def test_exec(self):
+        """Test the exec method."""
         text = """
         Keyword extraction is not that difficult after all.
         There are many libraries that can help you with keyword extraction.

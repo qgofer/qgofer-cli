@@ -35,7 +35,12 @@ rake = RAKE()
 
 
 class App:
-    """The main app class."""
+    """The main appliation class for managing the entirety of qgofer.
+
+    Attributes:
+        home: The home directory of the user, defaults to Path.home()
+        root_dir: The root directory to index, defaults to Path.home()
+    """
 
     __slots__ = (
         "_home",
@@ -49,11 +54,13 @@ class App:
     _instances: Dict[Any, Any] = {}
 
     def __new__(cls, home, root_dir) -> App:
+        """Create a new instance of the class. by using the singleton pattern."""
         if cls not in cls._instances:
             cls._instances[cls] = super(App, cls).__new__(cls)
         return cls._instances[cls]
 
     def __init__(self, home: Path = Path.home(), root_dir: Path = Path.home()):
+        """Initialize the class. using home and root_dir as the home and root directory of qgofer."""
         self._home = home
         self._root_dir = root_dir
         self._qgofer = self._home / '.qgofer'
@@ -69,28 +76,35 @@ class App:
 
     @property
     def home(self) -> Path:
+        """Return the home directory of the user."""
         return self._home
 
     @property
     def qgofer(self) -> Path:
+        """Return the qgofer directory."""
         return self._qgofer
 
     @property
     def qgofer_config(self) -> Path:
+        """Return the qgofer config file."""
         return self._qgofer_config
 
     @property
     def qgofer_cache(self) -> Path:
+        """Return the qgofer cache directory."""
         return self._qgofer_cache
 
     @property
     def qgofer_cache_db(self) -> Path:
+        """Return the qgofer cache database."""
         return self._qgofer_cache_db
 
     def __repr__(self) -> str:
+        """Return the representation of the class."""
         return f"{self.__class__.__name__}({self.home})"
 
     def __str__(self) -> str:
+        """Return the string representation of the class."""
         return "Qgofer your personal assistant"
 
 

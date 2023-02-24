@@ -1,3 +1,4 @@
+"""Rapid Automatic Keyword Extraction algorithm."""
 import operator
 import re
 from typing import Any, Dict
@@ -8,8 +9,9 @@ from .utils import stop_words
 def load_stop_words(stop_words_file_path: str) -> list:
     """Loads stop words from a file and return as a list of words.
 
-    Keyword arguments:
-    stop_words_file_path -- filepath of a file containing stop words
+    Args:
+        stop_words_file_path:
+            filepath of a file containing stop words
     """
     stop_words = []
     file = open(stop_words_file_path)
@@ -24,8 +26,9 @@ def load_stop_words(stop_words_file_path: str) -> list:
 def build_stop_word_regex(stop_words_file_path: str) -> re.Pattern:
     """Builds a regex expression to match any of the stop word.
 
-    Keyword arguments:
-    stop_words_file_path -- filepath of a file containing stop words
+    Args:
+        stop_words_file_path:
+            filepath of a file containing stop words
     """
     if stop_words_file_path:
         stop_words_list = load_stop_words(stop_words_file_path)
@@ -41,11 +44,15 @@ def build_stop_word_regex(stop_words_file_path: str) -> re.Pattern:
 
 
 class RAKE(object):
+    """Rapid Automatic Keyword Extraction algorithm."""
+
     def __init__(self, stop_words_file: str = ''):
+        """Initialize the RAKE object."""
         self.stop_words_file_path = stop_words_file
         self.stop_words_pattern = build_stop_word_regex(stop_words_file)
 
     def exec(self, text: str):
+        """Execute the RAKE algorithm."""
         sentences = self.split_sentences(text)
         phrases = self.generate_candidate_keywords(sentences)
         word_scores = self.calculate_word_scores(phrases)
@@ -63,9 +70,7 @@ class RAKE(object):
         return sentences
 
     def generate_candidate_keywords(self, sentences: list) -> list:
-        """
-        Returns keyword phrases after removing stopwords from each sentence.
-        """
+        """Returns keyword phrases after removing stopwords from each sentence."""
         phrases_list = []
         for sentence in sentences:
             phrases = re.sub(self.stop_words_pattern, '|', sentence.strip()).split('|')
@@ -77,6 +82,7 @@ class RAKE(object):
         return phrases_list
 
     def is_number(self, s):
+        """Check if a string is a number."""
         try:
             float(s) if '.' in s else int(s)
             return True
@@ -84,12 +90,13 @@ class RAKE(object):
             return False
 
     def separate_words(self, text: str, word_min_size: int = 0) -> list:
-        """
-        Return a list of all words of length greater than specified min size.
+        """Return a list of all words of length greater than specified min size.
 
-        Keyword arguments:
-        text -- the text that is to be split into words
-        word_min_size -- the min. no. of characters a word must have (def: 0)
+        Args:
+            text:
+                the text that is to be split into words
+            word_min_size:
+                the min. no. of characters a word must have (def: 0)
         """
         splitter = re.compile('[^a-zA-Z0-9_\\+\\-/]')
         words = []

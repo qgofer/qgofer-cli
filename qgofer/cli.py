@@ -14,6 +14,7 @@ app = typer.Typer()
 
 
 def version_callback(value: bool) -> None:
+    """Show the current version of qgofer that has been installed."""
     if value:
         typer.echo(f"{__app_name__}: v{__version__}\n")
         raise typer.Exit()

@@ -1,3 +1,4 @@
+"""Utility functions for qgofer."""
 import base64
 import uuid
 from pathlib import Path
@@ -5,7 +6,8 @@ from typing import Optional
 
 
 def generate_uuid():
-    """Generates a uuid 4 string, in this context for tracking each run of the experiment
+    """Generates a uuid 4 string, in this context for tracking each run of the experiment.
+
     Returns:
         an ascii friendly uuid4 string.
     """

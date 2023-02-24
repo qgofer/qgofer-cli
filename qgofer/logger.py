@@ -1,3 +1,4 @@
+"""Logging module for qgofer."""
 import datetime
 import logging
 import sys
@@ -6,7 +7,8 @@ from .utils import generate_uuid, get_log_path
 
 
 def get_logger(log_path=None, run_id=None):
-    """Returns a generic logger for logging relevant information pertaining to run
+    """Returns a generic logger for logging relevant information pertaining to run of qgofer.
+
     Returns:
         Python logger object
     """
