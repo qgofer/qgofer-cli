@@ -24,7 +24,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.9.16,<4.0"
+python = ">=3.6.2,<4.0"
 click = "8.0.1"
 
 black  = { version = "^21.5b2", optional = true}
