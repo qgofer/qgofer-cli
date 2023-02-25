@@ -13,7 +13,7 @@ All your documents are one quick search away.
 
 * Documentation: <https://qgofer.github.io/qgofer-cli>
 * GitHub: <https://github.com/qgofer/qgofer-cli>
-* PyPI: <https://pypi.org/project/qgofer-cli/>
+* PyPI: <https://pypi.org/project/qgofer/>
 * Free software: MIT
 
 **Usage**:
