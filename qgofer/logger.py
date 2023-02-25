@@ -6,7 +6,7 @@ import sys
 from .utils import generate_uuid, get_log_path
 
 
-def get_logger(log_path=None, run_id=None):
+def get_logger(log_path=None, run_id=None) -> logging.Logger:
     """Returns a generic logger for logging relevant information pertaining to run of qgofer.
 
     Returns:
@@ -14,7 +14,7 @@ def get_logger(log_path=None, run_id=None):
     """
     log_path = get_log_path(log_path)
     # create logger with 'spam_application'
-    logger = logging.getLogger("ce_application")
+    logger = logging.getLogger("qgofer")
     logger.setLevel(logging.DEBUG)
 
     if not run_id:
@@ -37,6 +37,6 @@ def get_logger(log_path=None, run_id=None):
         # add the handlers to the logger
         logger.addHandler(fh)
         logger.addHandler(ch)
-        logger.file_path = file_path
+        logger.info(f"Logging to {file_path}")
 
     return logger

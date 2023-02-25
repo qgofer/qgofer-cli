@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Optional
 
 
-def generate_uuid():
+def generate_uuid() -> str:
     """Generates a uuid 4 string, in this context for tracking each run of the experiment.
 
     Returns:

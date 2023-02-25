@@ -2220,4 +2220,4 @@ test = ["pytest", "black", "isort", "mypy", "flake8", "flake8-docstrings", "pyte
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.7,<4.0"
-content-hash = "82eb3863ba97eb21425c89983bc99b190a7fd419677e6ed34d9975cd1234e6a0"
+content-hash = "25e20a24980636eb4620947ddd44f8c75e9a3e7cb84cc0b6a29b9e8fc7244b20"
