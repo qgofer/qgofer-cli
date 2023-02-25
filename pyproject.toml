@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "qgofer"
-version = "0.0.0-prod0"
+version = "0.0.0"
 homepage = "https://github.com/qgofer/qgofer-cli"
 description = "All your documents are one quick search away."
 authors = ["acquayefrank <dev@qgofer.com>"]
