@@ -34,13 +34,13 @@ flake8-docstrings = { version = "^1.6.0", optional = true }
 mypy = {version = "^0.900", optional = true}
 pytest  = { version = "^6.2.4", optional = true}
 pytest-cov  = { version = "^2.12.0", optional = true}
-tox  = "^4.4.6"
+tox = {version = "^3.20.1", optional=true}
 virtualenv  = { version = "^20.2.2", optional = true}
 pip  = { version = "^20.3.1", optional = true}
 mkdocs  = { version = "^1.1.2", optional = true}
 mkdocs-include-markdown-plugin  = { version = "^1.0.0", optional = true}
 mkdocs-material  = { version = "^6.1.7", optional = true}
-mkdocstrings  = { version = "^0.15.2", optional = true}
+mkdocstrings  = { version = "^0.15.2", python = ">=3.7,<4.0"}
 mkdocs-material-extensions  = { version = "^1.0.1", optional = true}
 twine  = { version = "^3.3.0", optional = true}
 mkdocs-autorefs = {version = "^0.2.1", optional = true}
@@ -49,8 +49,7 @@ toml = {version = "^0.10.2", optional = true}
 bump2version = {version = "^1.0.1", optional = true}
 typer = {extras = ["all"], version = "^0.7.0"}
 attrs = "^22.2.0"
-aiofiles = "^23.1.0"
-keybert = "^0.7.0"
+aiofiles = {version = "^23.1.0", python = ">=3.7"}
 types-aiofiles = "^22.1.0.8"
 
 [tool.poetry.extras]
@@ -79,8 +78,8 @@ doc = [
 qgofer = 'qgofer.__main__:main'
 
 [tool.poetry.group.dev.dependencies]
-ipython = "^8.10.0"
-typer-cli = "^0.0.13"
+ipython = {version = "^8.10.0", python = ">=3.8"}
+typer-cli = {version = "^0.0.13", python = ">=3.7"}
 py = "^1.11.0"
 
 [tool.black]
