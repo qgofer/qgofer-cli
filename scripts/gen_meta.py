@@ -1,4 +1,8 @@
+"""generate projects metadata from pyproject.toml."""
+
+
 def qgofer_version():
+    """Get version from pyproject.toml."""
     with open('./pyproject.toml') as f:
         for line in f:
             if line.startswith('version'):
@@ -6,6 +10,7 @@ def qgofer_version():
 
 
 def qgofer_name():
+    """Get name from pyproject.toml."""
     with open('./pyproject.toml') as f:
         for line in f:
             if line.startswith('name'):
@@ -13,6 +18,7 @@ def qgofer_name():
 
 
 def qgofer_description():
+    """Get description from pyproject.toml."""
     with open('./pyproject.toml') as f:
         for line in f:
             if line.startswith('description'):
@@ -20,6 +26,7 @@ def qgofer_description():
 
 
 def generate_metadata():
+    """Generate metadata."""
     version = qgofer_version()
     name = qgofer_name()
     description = qgofer_description()
