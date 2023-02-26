@@ -1,0 +1,2736 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://qgofer.github.io/qgofer-cli/api/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Modules - qgofer-cli</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qgofer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="qgofer-cli" class="md-header__button md-logo" aria-label="qgofer-cli" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            qgofer-cli
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/qgofer/qgofer-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qgofer/qgofer-cli
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="qgofer-cli" class="md-nav__button md-logo" aria-label="qgofer-cli" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    qgofer-cli
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/qgofer/qgofer-cli" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qgofer/qgofer-cli
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Modules
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer" class="md-nav__link">
+    qgofer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.__main__" class="md-nav__link">
+    __main__
+  </a>
+  
+    <nav class="md-nav" aria-label="__main__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.__main__.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.app" class="md-nav__link">
+    app
+  </a>
+  
+    <nav class="md-nav" aria-label="app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App" class="md-nav__link">
+    App
+  </a>
+  
+    <nav class="md-nav" aria-label="App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.home" class="md-nav__link">
+    home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer" class="md-nav__link">
+    qgofer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_cache" class="md-nav__link">
+    qgofer_cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_cache_db" class="md-nav__link">
+    qgofer_cache_db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_config" class="md-nav__link">
+    qgofer_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__new__" class="md-nav__link">
+    __new__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.create_index_list" class="md-nav__link">
+    create_index_list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.process_index_list" class="md-nav__link">
+    process_index_list()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.cli" class="md-nav__link">
+    cli
+  </a>
+  
+    <nav class="md-nav" aria-label="cli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.init" class="md-nav__link">
+    init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.version_callback" class="md-nav__link">
+    version_callback()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.logger" class="md-nav__link">
+    logger
+  </a>
+  
+    <nav class="md-nav" aria-label="logger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.logger.get_logger" class="md-nav__link">
+    get_logger()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.rake" class="md-nav__link">
+    rake
+  </a>
+  
+    <nav class="md-nav" aria-label="rake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE" class="md-nav__link">
+    RAKE
+  </a>
+  
+    <nav class="md-nav" aria-label="RAKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.calculate_word_scores" class="md-nav__link">
+    calculate_word_scores()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.exec" class="md-nav__link">
+    exec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.generate_candidate_keyword_scores" class="md-nav__link">
+    generate_candidate_keyword_scores()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.generate_candidate_keywords" class="md-nav__link">
+    generate_candidate_keywords()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.is_number" class="md-nav__link">
+    is_number()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.separate_words" class="md-nav__link">
+    separate_words()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.split_sentences" class="md-nav__link">
+    split_sentences()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.build_stop_word_regex" class="md-nav__link">
+    build_stop_word_regex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.load_stop_words" class="md-nav__link">
+    load_stop_words()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.utils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.generate_uuid" class="md-nav__link">
+    generate_uuid()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.get_log_path" class="md-nav__link">
+    get_log_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.init_path" class="md-nav__link">
+    init_path()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer" class="md-nav__link">
+    qgofer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.__main__" class="md-nav__link">
+    __main__
+  </a>
+  
+    <nav class="md-nav" aria-label="__main__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.__main__.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.app" class="md-nav__link">
+    app
+  </a>
+  
+    <nav class="md-nav" aria-label="app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App" class="md-nav__link">
+    App
+  </a>
+  
+    <nav class="md-nav" aria-label="App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.home" class="md-nav__link">
+    home
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer" class="md-nav__link">
+    qgofer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_cache" class="md-nav__link">
+    qgofer_cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_cache_db" class="md-nav__link">
+    qgofer_cache_db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.qgofer_config" class="md-nav__link">
+    qgofer_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__new__" class="md-nav__link">
+    __new__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__repr__" class="md-nav__link">
+    __repr__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.App.__str__" class="md-nav__link">
+    __str__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.create_index_list" class="md-nav__link">
+    create_index_list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.app.process_index_list" class="md-nav__link">
+    process_index_list()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.cli" class="md-nav__link">
+    cli
+  </a>
+  
+    <nav class="md-nav" aria-label="cli">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.init" class="md-nav__link">
+    init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.main" class="md-nav__link">
+    main()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.cli.version_callback" class="md-nav__link">
+    version_callback()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.logger" class="md-nav__link">
+    logger
+  </a>
+  
+    <nav class="md-nav" aria-label="logger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.logger.get_logger" class="md-nav__link">
+    get_logger()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.rake" class="md-nav__link">
+    rake
+  </a>
+  
+    <nav class="md-nav" aria-label="rake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE" class="md-nav__link">
+    RAKE
+  </a>
+  
+    <nav class="md-nav" aria-label="RAKE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.calculate_word_scores" class="md-nav__link">
+    calculate_word_scores()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.exec" class="md-nav__link">
+    exec()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.generate_candidate_keyword_scores" class="md-nav__link">
+    generate_candidate_keyword_scores()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.generate_candidate_keywords" class="md-nav__link">
+    generate_candidate_keywords()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.is_number" class="md-nav__link">
+    is_number()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.separate_words" class="md-nav__link">
+    separate_words()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.RAKE.split_sentences" class="md-nav__link">
+    split_sentences()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.build_stop_word_regex" class="md-nav__link">
+    build_stop_word_regex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.rake.load_stop_words" class="md-nav__link">
+    load_stop_words()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qgofer.utils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.generate_uuid" class="md-nav__link">
+    generate_uuid()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.get_log_path" class="md-nav__link">
+    get_log_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qgofer.utils.init_path" class="md-nav__link">
+    init_path()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/qgofer/qgofer-cli/edit/master/docs/api.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Modules</h1>
+
+<div class="doc doc-object doc-module">
+
+<a id="qgofer"></a>
+    <div class="doc doc-contents first">
+
+      <p>Top-level package for qgofer.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.__main__" class="doc doc-heading">
+        <code>__main__</code>
+
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#qgofer.__main__" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>qgofer - A command line tool for searching your files.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.__main__.main" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
+
+
+<a href="#qgofer.__main__.main" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Run the qgofer cli.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/__main__.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run the qgofer cli.&quot;&quot;&quot;</span>
+    <span class="n">cli</span><span class="o">.</span><span class="n">app</span><span class="p">(</span><span class="n">prog_name</span><span class="o">=</span><span class="n">__app_name__</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.app" class="doc doc-heading">
+        <code>app</code>
+
+
+
+<a href="#qgofer.app" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Main module.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="qgofer.app.App" class="doc doc-heading">
+        <code>
+App        </code>
+
+
+
+<a href="#qgofer.app.App" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>The main appliation class for managing the entirety of qgofer.</p>
+
+<p><strong>Attributes:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>home</code></td>
+        <td></td>
+        <td><p>The home directory of the user, defaults to Path.home()</p></td>
+      </tr>
+      <tr>
+        <td><code>root_dir</code></td>
+        <td></td>
+        <td><p>The root directory to index, defaults to Path.home()</p></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">App</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The main appliation class for managing the entirety of qgofer.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        home: The home directory of the user, defaults to Path.home()</span>
+<span class="sd">        root_dir: The root directory to index, defaults to Path.home()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;_home&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_root_dir&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_qgofer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_qgofer_config&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_qgofer_cache&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_qgofer_cache_db&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_qgofer_logs&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">_instances</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">home</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">App</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a new instance of the class. by using the singleton pattern.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">cls</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">App</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">home</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">root_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the class. using home and root_dir as the home and root directory of qgofer.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_home</span> <span class="o">=</span> <span class="n">home</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_root_dir</span> <span class="o">=</span> <span class="n">root_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_home</span> <span class="o">/</span> <span class="s1">&#39;.qgofer&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;config.toml&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_config</span><span class="o">.</span><span class="n">touch</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;cache&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache_db</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">/</span> <span class="s1">&#39;qgofer.db&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache_db</span><span class="o">.</span><span class="n">touch</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_logs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;logs&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_logs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the home directory of the user.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_home</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qgofer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the qgofer directory.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qgofer_config</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the qgofer config file.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_config</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qgofer_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the qgofer cache directory.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qgofer_cache_db</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the qgofer cache database.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache_db</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the representation of the class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">home</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the string representation of the class.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;Qgofer your personal assistant&quot;</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="qgofer.app.App.home" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">home</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#qgofer.app.App.home" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the home directory of the user.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="qgofer.app.App.qgofer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">qgofer</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#qgofer.app.App.qgofer" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the qgofer directory.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="qgofer.app.App.qgofer_cache" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">qgofer_cache</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#qgofer.app.App.qgofer_cache" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the qgofer cache directory.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="qgofer.app.App.qgofer_cache_db" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">qgofer_cache_db</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#qgofer.app.App.qgofer_cache_db" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the qgofer cache database.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="qgofer.app.App.qgofer_config" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">qgofer_config</span><span class="p">:</span> <span class="n">Path</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a href="#qgofer.app.App.qgofer_config" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the qgofer config file.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.app.App.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">home</span><span class="o">=</span><span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/runner&#39;</span><span class="p">),</span> <span class="n">root_dir</span><span class="o">=</span><span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/home/runner&#39;</span><span class="p">))</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#qgofer.app.App.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize the class. using home and root_dir as the home and root directory of qgofer.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">home</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">root_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the class. using home and root_dir as the home and root directory of qgofer.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_home</span> <span class="o">=</span> <span class="n">home</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_root_dir</span> <span class="o">=</span> <span class="n">root_dir</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_home</span> <span class="o">/</span> <span class="s1">&#39;.qgofer&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;config.toml&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_config</span><span class="o">.</span><span class="n">touch</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;cache&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache_db</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">/</span> <span class="s1">&#39;qgofer.db&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_cache_db</span><span class="o">.</span><span class="n">touch</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_logs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer</span> <span class="o">/</span> <span class="s1">&#39;logs&#39;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_qgofer_logs</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.app.App.__new__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">home</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+      <small class="doc doc-property doc-property-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#qgofer.app.App.__new__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a new instance of the class. by using the singleton pattern.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">home</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">App</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a new instance of the class. by using the singleton pattern.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">cls</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">:</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">App</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.app.App.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#qgofer.app.App.__repr__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the representation of the class.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the representation of the class.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">home</span><span class="si">}</span><span class="s2">)&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.app.App.__str__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#qgofer.app.App.__str__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return the string representation of the class.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the string representation of the class.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;Qgofer your personal assistant&quot;</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.app.create_index_list" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.app.create_index_list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Index the folders.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">create_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">App</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Index the folders.&quot;&quot;&quot;</span>
+    <span class="c1"># A list to be populated with async tasks.</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">_index_folder</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">_root_dir</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">/</span> <span class="s2">&quot;inde_list.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">app</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.app.process_index_list" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">process_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.app.process_index_list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Process the index list.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/app.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">process_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">App</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Process the index list.&quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_read_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncGenerator</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read the index list.&quot;&quot;&quot;</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">_qgofer_cache</span> <span class="o">/</span> <span class="s2">&quot;inde_list.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">Path</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_process_files</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncGenerator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Process the index list.&quot;&quot;&quot;</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">_read_index_list</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+            <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="k">await</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="k">yield</span> <span class="n">content</span><span class="p">,</span> <span class="n">item</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_gen_meta</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncGenerator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate the meta data.&quot;&quot;&quot;</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">content</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">_process_files</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+            <span class="n">kw</span> <span class="o">=</span> <span class="n">rake</span><span class="o">.</span><span class="n">exec</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="n">m_time</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getmtime</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="n">c_time</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getctime</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">kw</span><span class="p">,</span> <span class="n">m_time</span><span class="p">,</span> <span class="n">c_time</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">kw</span><span class="p">,</span> <span class="n">m_time</span><span class="p">,</span> <span class="n">c_time</span><span class="p">,</span> <span class="n">file</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_process_meta</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">App</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Process the meta data.&quot;&quot;&quot;</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">kw</span><span class="p">,</span> <span class="n">m_time</span><span class="p">,</span> <span class="n">c_time</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">_gen_meta</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">kw</span><span class="p">,</span> <span class="n">m_time</span><span class="p">,</span> <span class="n">c_time</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+    <span class="n">async_run</span><span class="p">(</span><span class="n">_process_meta</span><span class="p">(</span><span class="n">app</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">app</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.cli" class="doc doc-heading">
+        <code>cli</code>
+
+
+
+<a href="#qgofer.cli" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Console script for qgofer_cli.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.cli.init" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">init</span><span class="p">(</span><span class="n">home_dir</span><span class="o">=&lt;</span><span class="n">typer</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">OptionInfo</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f52ff7e5610</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=&lt;</span><span class="n">typer</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">OptionInfo</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f52ff7e55e0</span><span class="o">&gt;</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.cli.init" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize qgofer.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/cli.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;wake-up&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="n">home_dir</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;--home-dir&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-d&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The user home directory to use for qgofer.&quot;</span><span class="p">,</span>
+        <span class="n">callback</span><span class="o">=</span><span class="n">init_path</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">root_dir</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;--root-dir&quot;</span><span class="p">,</span> <span class="s2">&quot;-r&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The root directory to start searching from.&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">init_path</span>
+    <span class="p">),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize qgofer.&quot;&quot;&quot;</span>
+    <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s2">&quot;Initializing qgofer...&quot;</span><span class="p">)</span>
+    <span class="n">qgofer_app</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">home_dir</span><span class="p">,</span> <span class="n">root_dir</span><span class="p">)</span>
+    <span class="n">qgofer_app</span> <span class="o">=</span> <span class="n">create_index_list</span><span class="p">(</span><span class="n">qgofer_app</span><span class="p">)</span>
+    <span class="n">qgofer_app</span> <span class="o">=</span> <span class="n">process_index_list</span><span class="p">(</span><span class="n">qgofer_app</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.cli.main" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">main</span><span class="p">(</span><span class="n">version</span><span class="o">=&lt;</span><span class="n">typer</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">OptionInfo</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f52ff7e5580</span><span class="o">&gt;</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.cli.main" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>About qgofer.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/cli.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span>
+    <span class="n">version</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;--what-version&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-v&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Show the current version of qgofer that has been installed.&quot;</span><span class="p">,</span>
+        <span class="n">callback</span><span class="o">=</span><span class="n">version_callback</span><span class="p">,</span>
+        <span class="n">is_eager</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;About qgofer.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getlogin</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;You&quot;</span>
+    <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">, I am Q, your assistant.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;My model version is &#39;</span><span class="si">{</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">__description__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;With my help, </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.cli.version_callback" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">version_callback</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.cli.version_callback" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Show the current version of qgofer that has been installed.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/cli.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">version_callback</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Show the current version of qgofer that has been installed.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">__app_name__</span><span class="si">}</span><span class="s2">: v</span><span class="si">{</span><span class="n">__version__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">typer</span><span class="o">.</span><span class="n">Exit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.logger" class="doc doc-heading">
+        <code>logger</code>
+
+
+
+<a href="#qgofer.logger" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Logging module for qgofer.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.logger.get_logger" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_logger</span><span class="p">(</span><span class="n">log_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.logger.get_logger" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns a generic logger for logging relevant information pertaining to run of qgofer.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Logger</code></td>
+      <td><p>Python logger object</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/logger.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="n">log_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a generic logger for logging relevant information pertaining to run of qgofer.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Python logger object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">log_path</span> <span class="o">=</span> <span class="n">get_log_path</span><span class="p">(</span><span class="n">log_path</span><span class="p">)</span>
+    <span class="c1"># create logger with &#39;spam_application&#39;</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;qgofer&quot;</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">run_id</span><span class="p">:</span>
+        <span class="n">run_id</span> <span class="o">=</span> <span class="n">generate_uuid</span><span class="p">()</span>
+
+    <span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">log_path</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">run_id</span><span class="si">}</span><span class="s2">_log_</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%y_%m_</span><span class="si">%d</span><span class="s1">_%H_%M_%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.log&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">logger</span><span class="o">.</span><span class="n">handlers</span><span class="p">:</span>
+        <span class="c1"># create file handler which logs even debug messages</span>
+        <span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+        <span class="c1"># create console handler with a higher log level</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="n">ch</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+        <span class="c1"># create formatter and add it to the handlers</span>
+        <span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(name)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+        <span class="n">ch</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+
+        <span class="c1"># add the handlers to the logger</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Logging to </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">logger</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.rake" class="doc doc-heading">
+        <code>rake</code>
+
+
+
+<a href="#qgofer.rake" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Rapid Automatic Keyword Extraction algorithm.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h3 id="qgofer.rake.RAKE" class="doc doc-heading">
+        <code>
+RAKE        </code>
+
+
+
+<a href="#qgofer.rake.RAKE" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Rapid Automatic Keyword Extraction algorithm.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RAKE</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rapid Automatic Keyword Extraction algorithm.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop_words_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the RAKE object.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_words_file_path</span> <span class="o">=</span> <span class="n">stop_words_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_words_pattern</span> <span class="o">=</span> <span class="n">build_stop_word_regex</span><span class="p">(</span><span class="n">stop_words_file</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">exec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Execute the RAKE algorithm.&quot;&quot;&quot;</span>
+        <span class="n">sentences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_sentences</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">phrases</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_candidate_keywords</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+        <span class="n">word_scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_word_scores</span><span class="p">(</span><span class="n">phrases</span><span class="p">)</span>
+        <span class="n">keyword_candidates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_candidate_keyword_scores</span><span class="p">(</span><span class="n">phrases</span><span class="p">,</span> <span class="n">word_scores</span><span class="p">)</span>
+        <span class="n">sorted_keywords</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">keyword_candidates</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sorted_keywords</span>
+
+    <span class="k">def</span> <span class="nf">split_sentences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Split text into sentences.&quot;&quot;&quot;</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;[.!?,;:</span><span class="se">\t\\\\</span><span class="s1">&quot;</span><span class="se">\\</span><span class="s1">(</span><span class="se">\\</span><span class="s1">)</span><span class="se">\\\&#39;\u2019\u2013</span><span class="s1">]|</span><span class="se">\\</span><span class="s1">s</span><span class="se">\\</span><span class="s1">-</span><span class="se">\\</span><span class="s1">s&#39;</span>
+        <span class="n">sentence_delimiters</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="n">sentences</span> <span class="o">=</span> <span class="n">sentence_delimiters</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sentences</span>
+
+    <span class="k">def</span> <span class="nf">generate_candidate_keywords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentences</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns keyword phrases after removing stopwords from each sentence.&quot;&quot;&quot;</span>
+        <span class="n">phrases_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+            <span class="n">phrases</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_words_pattern</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+                <span class="n">phrase</span> <span class="o">=</span> <span class="n">phrase</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">phrase</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="n">phrases_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">phrases_list</span>
+
+    <span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if a string is a number.&quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;.&#39;</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">separate_words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word_min_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a list of all words of length greater than specified min size.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            text:</span>
+<span class="sd">                the text that is to be split into words</span>
+<span class="sd">            word_min_size:</span>
+<span class="sd">                the min. no. of characters a word must have (def: 0)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">splitter</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[^a-zA-Z0-9_</span><span class="se">\\</span><span class="s1">+</span><span class="se">\\</span><span class="s1">-/]&#39;</span><span class="p">)</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">single_word</span> <span class="ow">in</span> <span class="n">splitter</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+            <span class="n">current_word</span> <span class="o">=</span> <span class="n">single_word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">word_min_size</span> <span class="ow">and</span> <span class="n">current_word</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_number</span><span class="p">(</span><span class="n">current_word</span><span class="p">):</span>
+                <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_word</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">words</span>
+
+    <span class="k">def</span> <span class="nf">calculate_word_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculates the word score for all the words in the phrases.&quot;&quot;&quot;</span>
+        <span class="n">word_frequency</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">word_degree</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">separate_words</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+            <span class="n">words_list_degree</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="n">word_frequency</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">word_frequency</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">word_degree</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="n">word_degree</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="n">words_list_degree</span>
+
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="p">:</span>
+            <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="n">word_frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+        <span class="c1"># Calculate word score = def(w) / freq(w)</span>
+        <span class="n">word_score</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="p">:</span>
+            <span class="c1"># word_score.setdefault(item, 0):</span>
+            <span class="n">word_score</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">word_frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">word_score</span>
+
+    <span class="k">def</span> <span class="nf">generate_candidate_keyword_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">word_score</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the dict. of candidate keywords with scores.&quot;&quot;&quot;</span>
+        <span class="n">keyword_candidates</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+            <span class="n">keyword_candidates</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">phrase</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">separate_words</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+            <span class="n">candidate_score</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+                <span class="n">candidate_score</span> <span class="o">+=</span> <span class="n">word_score</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+            <span class="n">keyword_candidates</span><span class="p">[</span><span class="n">phrase</span><span class="p">]</span> <span class="o">=</span> <span class="n">candidate_score</span>
+
+        <span class="k">return</span> <span class="n">keyword_candidates</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop_words_file</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+<a href="#qgofer.rake.RAKE.__init__" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Initialize the RAKE object.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop_words_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initialize the RAKE object.&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stop_words_file_path</span> <span class="o">=</span> <span class="n">stop_words_file</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">stop_words_pattern</span> <span class="o">=</span> <span class="n">build_stop_word_regex</span><span class="p">(</span><span class="n">stop_words_file</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.calculate_word_scores" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">calculate_word_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.calculate_word_scores" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Calculates the word score for all the words in the phrases.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_word_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates the word score for all the words in the phrases.&quot;&quot;&quot;</span>
+    <span class="n">word_frequency</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">word_degree</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">separate_words</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+        <span class="n">words_list_degree</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="n">word_frequency</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">word_frequency</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">word_degree</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">word_degree</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="n">words_list_degree</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="p">:</span>
+        <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="n">word_frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+    <span class="c1"># Calculate word score = def(w) / freq(w)</span>
+    <span class="n">word_score</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">word_frequency</span><span class="p">:</span>
+        <span class="c1"># word_score.setdefault(item, 0):</span>
+        <span class="n">word_score</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_degree</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">word_frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">word_score</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.exec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">exec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.exec" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Execute the RAKE algorithm.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute the RAKE algorithm.&quot;&quot;&quot;</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_sentences</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">phrases</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_candidate_keywords</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+    <span class="n">word_scores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_word_scores</span><span class="p">(</span><span class="n">phrases</span><span class="p">)</span>
+    <span class="n">keyword_candidates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_candidate_keyword_scores</span><span class="p">(</span><span class="n">phrases</span><span class="p">,</span> <span class="n">word_scores</span><span class="p">)</span>
+    <span class="n">sorted_keywords</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">keyword_candidates</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sorted_keywords</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.generate_candidate_keyword_scores" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">generate_candidate_keyword_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">,</span> <span class="n">word_score</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.generate_candidate_keyword_scores" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns the dict. of candidate keywords with scores.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_candidate_keyword_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phrases</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">word_score</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the dict. of candidate keywords with scores.&quot;&quot;&quot;</span>
+    <span class="n">keyword_candidates</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+        <span class="n">keyword_candidates</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">phrase</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">separate_words</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+        <span class="n">candidate_score</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="n">candidate_score</span> <span class="o">+=</span> <span class="n">word_score</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+        <span class="n">keyword_candidates</span><span class="p">[</span><span class="n">phrase</span><span class="p">]</span> <span class="o">=</span> <span class="n">candidate_score</span>
+
+    <span class="k">return</span> <span class="n">keyword_candidates</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.generate_candidate_keywords" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">generate_candidate_keywords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentences</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.generate_candidate_keywords" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns keyword phrases after removing stopwords from each sentence.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_candidate_keywords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentences</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns keyword phrases after removing stopwords from each sentence.&quot;&quot;&quot;</span>
+    <span class="n">phrases_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+        <span class="n">phrases</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_words_pattern</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">phrases</span><span class="p">:</span>
+            <span class="n">phrase</span> <span class="o">=</span> <span class="n">phrase</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">phrase</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">phrases_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">phrases_list</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.is_number" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.is_number" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Check if a string is a number.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if a string is a number.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;.&#39;</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.separate_words" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">separate_words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">word_min_size</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.separate_words" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Return a list of all words of length greater than specified min size.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>str</code></td>
+        <td><p>the text that is to be split into words</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>word_min_size</code></td>
+        <td><code>int</code></td>
+        <td><p>the min. no. of characters a word must have (def: 0)</p></td>
+        <td><code>0</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">separate_words</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word_min_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of all words of length greater than specified min size.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text:</span>
+<span class="sd">            the text that is to be split into words</span>
+<span class="sd">        word_min_size:</span>
+<span class="sd">            the min. no. of characters a word must have (def: 0)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">splitter</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[^a-zA-Z0-9_</span><span class="se">\\</span><span class="s1">+</span><span class="se">\\</span><span class="s1">-/]&#39;</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">single_word</span> <span class="ow">in</span> <span class="n">splitter</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">current_word</span> <span class="o">=</span> <span class="n">single_word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">word_min_size</span> <span class="ow">and</span> <span class="n">current_word</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_number</span><span class="p">(</span><span class="n">current_word</span><span class="p">):</span>
+            <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_word</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">words</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h4 id="qgofer.rake.RAKE.split_sentences" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">split_sentences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.RAKE.split_sentences" class="headerlink" title="Permanent link">&para;</a></h4>
+
+    <div class="doc doc-contents ">
+
+      <p>Split text into sentences.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">split_sentences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split text into sentences.&quot;&quot;&quot;</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;[.!?,;:</span><span class="se">\t\\\\</span><span class="s1">&quot;</span><span class="se">\\</span><span class="s1">(</span><span class="se">\\</span><span class="s1">)</span><span class="se">\\\&#39;\u2019\u2013</span><span class="s1">]|</span><span class="se">\\</span><span class="s1">s</span><span class="se">\\</span><span class="s1">-</span><span class="se">\\</span><span class="s1">s&#39;</span>
+    <span class="n">sentence_delimiters</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sentence_delimiters</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sentences</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.rake.build_stop_word_regex" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">build_stop_word_regex</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.build_stop_word_regex" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Builds a regex expression to match any of the stop word.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>stop_words_file_path</code></td>
+        <td><code>str</code></td>
+        <td><p>filepath of a file containing stop words</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">build_stop_word_regex</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">re</span><span class="o">.</span><span class="n">Pattern</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Builds a regex expression to match any of the stop word.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        stop_words_file_path:</span>
+<span class="sd">            filepath of a file containing stop words</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">stop_words_file_path</span><span class="p">:</span>
+        <span class="n">stop_words_list</span> <span class="o">=</span> <span class="n">load_stop_words</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">stop_words_list</span> <span class="o">=</span> <span class="n">stop_words</span>
+    <span class="n">stop_words_regex_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">stop_words_list</span><span class="p">:</span>
+        <span class="n">word_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\b&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;(?![\w-])&#39;</span>
+        <span class="n">stop_words_regex_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word_regex</span><span class="p">)</span>
+    <span class="n">stop_words_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stop_words_regex_list</span><span class="p">),</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">stop_words_pattern</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.rake.load_stop_words" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_stop_words</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.rake.load_stop_words" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Loads stop words from a file and return as a list of words.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>stop_words_file_path</code></td>
+        <td><code>str</code></td>
+        <td><p>filepath of a file containing stop words</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/rake.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_stop_words</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Loads stop words from a file and return as a list of words.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        stop_words_file_path:</span>
+<span class="sd">            filepath of a file containing stop words</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">stop_words_file_path</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;#&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>  <span class="c1"># in case more than one per line</span>
+                <span class="n">stop_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">stop_words</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-module">
+
+
+
+<h2 id="qgofer.utils" class="doc doc-heading">
+        <code>utils</code>
+
+
+
+<a href="#qgofer.utils" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Utility functions for qgofer.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.utils.generate_uuid" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">generate_uuid</span><span class="p">()</span></code>
+
+
+<a href="#qgofer.utils.generate_uuid" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Generates a uuid 4 string, in this context for tracking each run of the experiment.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code></td>
+      <td><p>an ascii friendly uuid4 string.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>qgofer/utils.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_uuid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates a uuid 4 string, in this context for tracking each run of the experiment.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        an ascii friendly uuid4 string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">urlsafe_b64encode</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">bytes</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;=&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.utils.get_log_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_log_path</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.utils.get_log_path" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns the log path.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/utils.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_log_path</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the log path.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">init_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">/</span> <span class="s1">&#39;.qgofer&#39;</span> <span class="o">/</span> <span class="s1">&#39;logs&#39;</span>
+        <span class="n">path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="qgofer.utils.init_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">init_path</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+<a href="#qgofer.utils.init_path" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert the string to a path object.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>qgofer/utils.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_path</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert the string to a path object.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../usage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Usage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Usage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../contributing/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Contributing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/qgofer/qgofer-cli" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:dev@qgofer.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

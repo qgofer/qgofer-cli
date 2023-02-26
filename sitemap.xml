@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/api/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/changelog/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/contributing/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/installation/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://qgofer.github.io/qgofer-cli/usage/</loc>
+         <lastmod>2023-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
