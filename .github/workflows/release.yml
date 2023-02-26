@@ -18,7 +18,8 @@ jobs:
   release:
     name: Create Release
     runs-on: ubuntu-20.04
-
+    permissions:
+      contents: write
     strategy:
       matrix:
         python-versions: [3.9]
