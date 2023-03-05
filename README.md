@@ -68,6 +68,12 @@ $ wake-up [OPTIONS]
 
 ## TODO
 
+## Branching:
+
+*branch early, and branch often*
+
+[Git branching rules:](https://gist.github.com/acquayefrank/d459f5ec5fb591cd8664bdcfb8cec108)
+
 ## Credits
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage) project template.
